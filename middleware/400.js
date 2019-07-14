@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = (err,req,res,next) => {
+module.exports = (req,res) => {
   console.log('400err');
-  res.status(400).send('Huh???');
+  res.status(404).send('Cant find the page');
 };
