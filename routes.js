@@ -5,15 +5,14 @@ const app = express();
 const DError = require('./middleware/DError.js');
 
 
-let router = module.exports = {
-  
-};
+let router = express.Router();
 
 
-('/c', (req,res) => {
+router.get('/c', (req,res) => {
   res.status(200).send('Route C');
 });
 
 router.get('/d', DError, (req,res) => {
   res.status(200).send('Route D');
 });
+module.exports = router;
